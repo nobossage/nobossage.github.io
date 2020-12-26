@@ -3,9 +3,9 @@
 <addon id="repository.nobossage" name="Noble Repository" version="1.0.2" provider-name="Noble Ossage">
     <extension point="xbmc.addon.repository" name="Example Repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/nobossage/nobossage.github.io/BRANCH_NAME_HERE/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/nobossage/nobossage.github.io/BRANCH_NAME_HERE/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/nobossage/nobossage.github.io/BRANCH_NAME_HERE/zips/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/nobossage/nobossage.github.io/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/nobossage/nobossage.github.io/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/nobossage/nobossage.github.io/master/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
