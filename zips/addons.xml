@@ -22,7 +22,7 @@
 
 <addon
   id="skin.mimic"
-  version="6.0.4"
+  version="6.0.5a"
   name="Mimic"
   provider-name="braz(Noble)">
     <requires>
@@ -121,7 +121,7 @@
 
 <addon
   id="skin.omni110"
-  version="1.0.10"
+  version="1.0.11a"
   name="Omni110"
   provider-name="braz, DaedalusBLN, Noble">
 	<requires>

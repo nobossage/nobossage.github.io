@@ -6,6 +6,7 @@
     <onload>ClearProperty(MediaMenu,Home)</onload>
     <onunload>ClearProperty(MediaMenu,Home)</onunload>
     <onunload>ClearProperty(Window.HasSettings,Home)</onunload>
+    <views>50,51</views>
     <allowoverlay>no</allowoverlay>
     <controls>
         <include>CommonBackground</include>

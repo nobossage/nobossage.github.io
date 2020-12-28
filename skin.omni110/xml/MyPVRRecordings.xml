@@ -4,6 +4,7 @@
     <menucontrol>9051</menucontrol>
     <onload>ClearProperty(MediaMenu,home)</onload>
     <onunload>ClearProperty(MediaMenu,home)</onunload>
+    <views>50,51</views>
     <allowoverlay>no</allowoverlay>
     <controls>
         <include>CommonBackground</include>

@@ -405,8 +405,8 @@
         <value>DefaultIconClock.png</value>
     </variable>
     <variable name="ColorRecordingVar">
-        <value condition="Player.Recording">ffff0000</value>
-        <value condition="!Player.Recording">maintext</value>
+        <value condition="PVR.IsRecordingPlayingChannel">ffff0000</value>
+        <value condition="!PVR.IsRecordingPlayingChannel">maintext</value>
     </variable>
     <variable name="SortDirection">
         <value condition="Container.SortDirection(Ascending)">$LOCALIZE[31050]</value>

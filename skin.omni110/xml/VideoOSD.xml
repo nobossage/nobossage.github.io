@@ -198,8 +198,11 @@
                     <width>100</width>
                     <height>100</height>
                     <font>IconMedium</font>
-                    <onclick>PlayerControl(Record)</onclick>
-                    <enable>Player.CanRecord</enable>
+                    <!--<onclick>PlayerControl(Record)</onclick>
+                    <enable>Player.CanRecord</enable>-->
+                    <selected>!PVR.IsRecordingPlayingChannel</selected>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<visible>PVR.CanRecordPlayingChannel</visible>
                     <usealttexture>Player.Recording</usealttexture>
                     <visible>VideoPlayer.Content(livetv)</visible>
                 </control>
