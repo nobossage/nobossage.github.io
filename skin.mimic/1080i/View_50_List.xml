@@ -158,7 +158,7 @@
                     <scrolltime tween="quadratic" easing="out">200</scrolltime>
                     <itemlayout height="120" width="1150" condition="!Skin.HasSetting(Enable.2ColumnList) + !Skin.HasSetting(Enable.SlimList) + !Skin.HasSetting(Enable.WideList)">
                         <control type="image">
-                            <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible>
+                            <visible>!$EXP[isMovie] + !String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible>
                             <left>10</left>
                             <top>10</top>
                             <width>100</width>
@@ -166,6 +166,29 @@
                             <aspectratio scalediffuse="false">keep</aspectratio>
                             <texture background="true" diffuse="diffuse/list-icon.png" fallback="DefaultFolder.png">$VAR[ListIcon]</texture>
                         </control>
+                        <!--  My edit -->
+                        <control type="image">
+                            <visible>[[$EXP[isMovie] | $EXP[isTvshow] | $EXP[isSeason] ]  + !Container.Content(actors)] + !String.Contains(Container.FolderPath,plugin.video) + !String.StartsWith(ListItem.Icon,Default)</visible>
+                            <!--<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible> -->
+                            <left>10</left>
+                            <top>10</top>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture background="true" diffuse="diffuse/list-icon.png" fallback="DefaultFolder.png">$VAR[PosterVar]</texture>
+                        </control>
+                        <!-- для отображния обложки сериалов -->
+                        <control type="image">
+                            <visible>[$EXP[isTvshow] | $EXP[isSeason]]</visible>
+                            <!--<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible> -->
+                            <left>10</left>
+                            <top>10</top>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture background="true" diffuse="diffuse/list-icon.png" fallback="DefaultFolder.png">$VAR[PosterVar]</texture>
+                        </control>
+
                         <!-- Fix for default icons not showing up for addons that don't have one -->
                         <control type="image">
                             <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + Container.Content(addons)</visible>
@@ -244,7 +267,7 @@
                     </itemlayout>
                     <focusedlayout height="120" width="1150" condition="!Skin.HasSetting(Enable.2ColumnList) + !Skin.HasSetting(Enable.SlimList) + !Skin.HasSetting(Enable.WideList)">
                         <control type="image">
-                            <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible>
+                            <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons) + !$EXP[isMovie] </visible>
                             <left>10</left>
                             <top>10</top>
                             <width>100</width>
@@ -252,6 +275,31 @@
                             <aspectratio scalediffuse="false">keep</aspectratio>
                             <texture background="true" diffuse="diffuse/list-icon.png" fallback="DefaultFolder.png">$VAR[ListIcon]</texture>
                         </control>
+
+                       <!-- my edit -->  
+                        <control type="image">
+                            <visible>[[$EXP[isMovie] | $EXP[isTvshow] | $EXP[isSeason] ]+ !Container.Content(actors)] + !String.Contains(Container.FolderPath,plugin.video) + !String.StartsWith(ListItem.Icon,Default)</visible>
+                            <!-- <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible> -->
+                            <left>10</left>
+                            <top>10</top>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture background="true" diffuse="diffuse/list-icon.png" fallback="DefaultFolder.png">$VAR[PosterVar]</texture>
+                        </control>
+                        <!-- для отображния обложки сериалов -->
+                        <control type="image">
+                            <visible>[$EXP[isTvshow] | $EXP[isSeason]]</visible>
+                            <!--<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible> -->
+                            <left>10</left>
+                            <top>10</top>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture background="true" diffuse="diffuse/list-icon.png" fallback="DefaultFolder.png">$VAR[PosterVar]</texture>
+                        </control>
+                        
+                        
                         <control type="image">
                             <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + Container.Content(addons)</visible>
                             <left>10</left>
@@ -924,11 +972,26 @@
                         <width>560</width>
                         <height>840</height>
                         <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-                        <texture background="true" diffuse="diffuse/list-poster.png">$INFO[ListItem.Icon]</texture>
+                        <!--<texture background="true" diffuse="diffuse/list-poster.png">$INFO[ListItem.Icon]</texture>-->
+                        <texture background="true" diffuse="diffuse/list-poster.png">$VAR[PosterVar]</texture>
                         <fadetime>IconCrossfadeTime</fadetime>
                     </control>
                 </control>
+                <!-- My edit -->
+                        <!-- для отображния обложки сериалов -->
                 <control type="group">
+                    <left>1276</left>
+                    <visible>$EXP[isTvshow] | $EXP[isSeason]</visible>
+                    <control type="image">
+                        <width>560</width>
+                        <height>840</height>
+                        <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="diffuse/list-poster.png">$VAR[PosterVar]</texture>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                    </control>
+                </control><!-- -->
+<!-- <texture background="true">$VAR[ListIcon]</texture> -->
+               <!-- <control type="group">
                     <left>1276</left>
                     <visible>[![$EXP[isMovie] | $EXP[isTvshow] | $EXP[isSeason] | $EXP[isSet] | Container.Content(actors) | Window.IsActive(videoplaylist) | $EXP[isEpisode] | Container.Content(addons) | $EXP[isArtist] | $EXP[isAlbum] | $EXP[isSong] | $EXP[isMusicvideo]] | [String.Contains(Container.FolderPath,plugin.video) + !$EXP[isEpisode]]] + !String.StartsWith(ListItem.Icon,Default)</visible>
                     <animation effect="slide" start="0,0" end="0,15" time="0" tween="cubic" easing="inout" condition="$EXP[PluginAdvancedLauncher]">Conditional</animation>
@@ -936,10 +999,24 @@
                         <width>560</width>
                         <height>840</height>
                         <aspectratio align="center" aligny="top">keep</aspectratio>
-                        <texture background="true">$VAR[ListIcon]</texture>
+                        <texture background="true" diffuse="diffuse/list-poster.png">$VAR[PosterVar]</texture>
+
                         <fadetime>IconCrossfadeTime</fadetime>
                     </control>
                 </control>
+                <!-- <control type="group">
+                    <left>1276</left>
+                    <visible>[ $EXP[isTvshow] | $EXP[isSeason] | Container.Content(addons)] + !String.StartsWith(ListItem.Icon,Default)</visible>
+                    <animation effect="slide" start="0,0" end="0,15" time="0" tween="cubic" easing="inout" condition="$EXP[PluginAdvancedLauncher]">Conditional</animation>
+                    <control type="image">
+                        <width>560</width>
+                        <height>840</height>
+                        <aspectratio align="center" aligny="top">keep</aspectratio>
+                        <texture background="true" diffuse="diffuse/list-poster.png">$VAR[PosterVar]</texture>
+                        <fadetime>IconCrossfadeTime</fadetime>
+                    </control>
+                </control><!-- -->
+                <!-- музыка -->
                 <control type="group">
                     <left>1276</left>
                     <visible>[Container.Content(addons) | $EXP[isArtist] | $EXP[isAlbum] | $EXP[isSong] | $EXP[isMusicvideo] | Container.Content(studios)] | String.StartsWith(ListItem.Icon,Default)</visible>
@@ -952,14 +1029,16 @@
                     </control>
                     <control type="grouplist">
                         <itemgap>15</itemgap>
+                        
                         <control type="image">
-                            <visible>!Container.Content(addons)</visible>
+                            <!-- <visible>!Container.Content(addons)</visible> Ошибка в обложке сериалов -->
+                            <visible>!Container.Content(addons) + !$EXP[isTvshow] + !$EXP[isSeason] </visible>
                             <width>560</width>
                             <height>560</height>
                             <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                             <texture background="true" diffuse="diffuse/list-square.png" fallback="DefaultFolder.png">$VAR[ThumbViewImage]</texture>
                             <fadetime>IconCrossfadeTime</fadetime>
-                        </control>
+                        </control><!--  -->
                         <control type="image">
                             <visible>Container.Content(addons)</visible>
                             <width>560</width>
