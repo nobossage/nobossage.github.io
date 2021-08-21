@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.mimic"
-  version="6.0.7a"
+  version="6.0.7b"
   name="Mimic"
   provider-name="braz(Noble)">
     <requires>
@@ -94,6 +94,6 @@
             <screenshot>resources/screenshot-09.jpg</screenshot>
             <screenshot>resources/screenshot-10.jpg</screenshot>
         </assets>
-        <news>6.0.6[CR]- Updated for Kodi 19 Matrix.[CR]- Add info block at play cinema.</news>
+        <news>6.0.7b[CR]- Updated for Kodi 19 Matrix.[CR].</news>
     </extension>
 </addon>

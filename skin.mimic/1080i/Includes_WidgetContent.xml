@@ -217,8 +217,8 @@
                 <width>208</width>
                 <height>310</height>
                 <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/poster-widget.png">$VAR[WidgetArt]</texture>
-            </control>
+                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/poster-widget.png">$VAR[PosterVar]</texture>
+            </control><!-- $VAR[WidgetArt] -->
             <control type="textbox">
                 <left>250</left>
                 <top>30</top>
@@ -262,7 +262,7 @@
                 <width>208</width>
                 <height>310</height>
                 <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/poster-widget.png">$VAR[WidgetArt]</texture>
+                <texture background="true" fallback="DefaultFolder.png" diffuse="diffuse/poster-widget.png">$VAR[PosterVar]</texture><!-- $VAR[WidgetArt] -->
             </control>
             <control type="textbox">
                 <left>250</left>
