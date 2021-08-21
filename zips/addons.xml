@@ -22,7 +22,7 @@
 
 <addon
   id="skin.mimic"
-  version="6.0.7b"
+  version="6.0.7c"
   name="Mimic"
   provider-name="braz(Noble)">
     <requires>
@@ -115,7 +115,7 @@
             <screenshot>resources/screenshot-09.jpg</screenshot>
             <screenshot>resources/screenshot-10.jpg</screenshot>
         </assets>
-        <news>6.0.7b[CR]- Updated for Kodi 19 Matrix.[CR].</news>
+        <news>6.0.7c[CR]- Updated for Kodi 19 Matrix.[CR].</news>
     </extension>
 </addon>
 
