@@ -278,7 +278,7 @@
 
                        <!-- my edit -->  
                         <control type="image">
-                            <visible>[[$EXP[isMovie] | $EXP[isTvshow] | $EXP[isSeason] ]+ !Container.Content(actors)] + !String.StartsWith(ListItem.Icon,Default)</visible>
+                            <visible>[[$EXP[isMovie] | $EXP[isTvshow] | $EXP[isSeason] | String.Contains(Container.FolderPath,plugin.video) ]+ !Container.Content(actors)] + !String.StartsWith(ListItem.Icon,Default)</visible>
                             <!-- <visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[13409]) + !Container.Content(addons)</visible> + !String.Contains(Container.FolderPath,plugin.video) -->
                             <left>10</left>
                             <top>10</top>
@@ -1000,7 +1000,7 @@
                         <fadetime>IconCrossfadeTime</fadetime>
                     </control>
                 </control>
-                <control type="group">
+                <!--<control type="group">
                     <left>1276</left>
                     <visible>[ $EXP[isTvshow] | $EXP[isSeason] | Container.Content(addons)] + !String.StartsWith(ListItem.Icon,Default)</visible>
                     <animation effect="slide" start="0,0" end="0,15" time="0" tween="cubic" easing="inout" condition="$EXP[PluginAdvancedLauncher]">Conditional</animation>
@@ -1011,7 +1011,7 @@
                         <texture background="true" diffuse="diffuse/list-poster.png">$VAR[PosterVar]</texture>
                         <fadetime>IconCrossfadeTime</fadetime>
                     </control>
-                </control>
+                </control> -->
                 <!-- музыка -->
                 <control type="group">
                     <left>1276</left>
