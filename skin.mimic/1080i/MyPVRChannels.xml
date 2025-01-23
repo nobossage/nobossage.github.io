@@ -58,6 +58,16 @@
                         <aspectratio align="center" aligny="center">keep</aspectratio>
                         <texture background="true" fallback="DefaultTVShows.png">$INFO[ListItem.Thumb]</texture>
                     </control>
+                    
+                    <control type="image">
+							<left>5</left>
+							<top>7</top>
+							<width>16</width>
+							<height>16</height>
+							<texture>pvr-hasarchive.png</texture>
+                            <visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+						</control><!--  Здесь! -->
+                        
                     <control type="label">
                         <visible>ListItem.IsPlaying</visible>
                         <left>200</left>
@@ -113,6 +123,15 @@
                         <aspectratio align="center" aligny="center">keep</aspectratio>
                         <texture background="true" fallback="DefaultTVShows.png">$INFO[ListItem.Thumb]</texture>
                     </control>
+                    <control type="image">
+							<left>5</left>
+							<top>7</top>
+							<width>16</width>
+							<height>16</height>
+							<texture>pvr-hasarchive.png</texture>
+                            <visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+						</control><!--  Здесь! -->
+                        
                     <control type="label">
                         <visible>ListItem.IsPlaying</visible>
                         <left>200</left>

@@ -144,6 +144,17 @@
                         <align>center</align>
                         <texturenofocus colordiffuse="33787878">selecteditem_bg.png</texturenofocus>
                     </control>
+                    
+                    <control type="button" id="10">
+                        <description>Play programme</description>
+                        <width>344</width>
+                        <font>font15_title</font>
+                        <align>center</align>
+                        <texturenofocus colordiffuse="33787878">selecteditem_bg.png</texturenofocus>
+                        <label>19190</label>
+                        <visible>Window.IsActive(PVRGuideInfo)</visible>
+                    </control>
+            
                     <control type="button" id="5">
                         <description>Switch button</description>
                         <visible>Window.IsActive(PVRGuideInfo)</visible>

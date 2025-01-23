@@ -57,6 +57,16 @@
                         <align>center</align>
                         <label>$INFO[ListItem.ChannelNumberLabel]</label>
                     </control>
+                    
+                    <control type="image">
+			<left>15</left>
+			<top>7</top>
+			<width>16</width>
+			<height>16</height>
+			<texture>pvr-hasarchive.png</texture>
+                        <visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+		     </control><!--  Здесь! -->
+
                     <control type="label">
                         <left>110</left>
                         <width>236</width>
@@ -81,6 +91,15 @@
                         <align>center</align>
                         <label>$INFO[ListItem.ChannelNumberLabel]</label>
                     </control>
+                    
+                    <control type="image">
+			<left>15</left>
+			<top>7</top>
+			<width>16</width>
+			<height>16</height>
+			<texture>pvr-hasarchive.png</texture>
+                        <visible>!ListItem.IsRecording + ListItem.HasArchive</visible>
+		    </control><!--  Здесь! -->
                     <control type="label" id="1">
                         <left>110</left>
                         <width>236</width>
